@@ -1,0 +1,13 @@
+.header-search{
+    outline: none;
+    border: none;
+    background-color: #F9F9F9;
+    border-radius: 15px;
+
+    width: 756px;
+}
+
+.header-search:focus{
+    outline: none;
+    border: none;
+}
