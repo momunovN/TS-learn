@@ -1,4 +1,4 @@
-.header-search{
+.header-search {
     outline: none;
     border: none;
     background-color: #F9F9F9;
@@ -7,7 +7,83 @@
     width: 756px;
 }
 
-.header-search:focus{
+.header-search:focus {
     outline: none;
     border: none;
 }
+
+.logo-name {
+    color: black;
+    font-size: 24px;
+    font-family: Nunito;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.24px;
+    word-wrap: break-word;
+}
+
+
+.logo-disc {
+    color: #7B7B7B;
+    font-size: 16px;
+    font-family: Nunito;
+    font-weight: 400;
+    word-wrap: break-word;
+}
+
+
+.logo-header {
+    gap: 15px;
+}
+
+.search-icon {
+    color: #ADADAD;
+}
+
+.search-inp {
+    align-items: center;
+    gap: 12px;
+}
+
+.header {
+    justify-content: space-between;
+    border-bottom: 1px solid #EDEDED;
+    padding-top: 42px;
+    padding-bottom: 42px;
+}
+
+.btn-header {
+    background-color: #fff;
+    border: 1px solid #FE5F00;
+   display: flex;
+   gap: 8px;
+   border: 0 14px 0 14px;
+    text-align: center;
+    color: #FE5F00;
+    font-size: 16px;
+    font-family: Nunito;
+    font-weight: 600;
+    word-wrap: break-word;
+
+    padding:  12px 22px 12px 22px;
+}
+
+.btn-header {
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+  }
+  
+
+  .btn-header:hover{
+    background-color: #FE5F00;
+    color: #fff;
+
+  }
+
+  .btn-header:hover .user-icon {
+    color: #fff;
+  }
+  
+  .btn-cart{
+    align-items: center;
+    gap: 15px;
+  }

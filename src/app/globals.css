@@ -93,3 +93,20 @@ html {
 input{
   outline: none;
 }
+
+
+.container{
+  max-width: 1380px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 30px;
+
+}
+
+body{
+  background-color: #FFBF9B;
+}
+
+.main{
+  padding: 29px 31px;
+}
