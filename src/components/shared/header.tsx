@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 
-import "../app/globals.css";
+import '../../app/globals.css'
 import "./header.css";
 
 import Image from "next/image";

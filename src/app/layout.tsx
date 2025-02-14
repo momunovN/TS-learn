@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
 
-import Header from "@/shared/header";
+import Header from "@/components/shared/header";
+import { Title } from "@/components/shared/title/title";
 
 const nunito = Nunito({
   subsets: ["cyrillic"],
@@ -26,8 +27,9 @@ export default function RootLayout({
         {children}
         <main className="pt-[31px] ">
           <div className="container">
-            <div className="main">
+            <div className="main flex flex-col justify-center">
               <Header />
+              <Title />
             </div>
           </div>
         </main>
