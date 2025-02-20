@@ -1,0 +1,3 @@
+[submodule "TS-learn"]
+	path = TS-learn
+	url = https://github.com/momunovN/TS-learn

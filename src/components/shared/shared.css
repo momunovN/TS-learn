@@ -1,0 +1,20 @@
+.sort-all{
+    justify-content: space-between;
+
+}
+
+.btn-sort{
+    border: none;
+}
+
+.sort-btn{
+    background: #FAFAFA;
+    color: #FE5F00;
+}
+
+.sort-btn span{
+    color: black;
+}
+
+
+
