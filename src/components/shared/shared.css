@@ -1,20 +1,51 @@
-.sort-all{
+.sort-all {
     justify-content: space-between;
 
 }
 
-.btn-sort{
+.btn-sort {
     border: none;
 }
 
-.sort-btn{
+.sort-btn {
     background: #FAFAFA;
     color: #FE5F00;
 }
 
-.sort-btn span{
+.sort-btn span {
     color: black;
 }
 
 
 
+.sort-btn:hover {
+    color: #FAFAFA;
+
+}
+
+.sort-btn:hover span {
+    color: #3700ff;
+
+}
+
+.filter-1 span {
+    display: flex;
+}
+
+.filter {
+    width: 244px;
+}
+
+.inp-num {
+    width: 90px;
+}
+
+.btn-view-all {
+    width: 114px;
+    background: none;
+    color: #FE5F00;
+    font-size: 16px;
+    font-family: Nunito;
+    font-weight: 400;
+    word-wrap: break-word;
+}

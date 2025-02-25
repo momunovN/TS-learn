@@ -4,6 +4,7 @@ import "./globals.css";
 
 import Header from "@/components/shared/header";
 import { Title } from "@/components/shared/title/title";
+import { Filter } from "@/components/shared/title/filter";
 
 const nunito = Nunito({
   subsets: ["cyrillic"],
@@ -30,6 +31,9 @@ export default function RootLayout({
             <div className="main flex flex-col justify-center">
               <Header />
               <Title />
+              <main className="main">
+                <Filter/>
+              </main>
             </div>
           </div>
         </main>

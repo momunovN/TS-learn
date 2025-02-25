@@ -42,9 +42,9 @@ export const Title: React.FC<Props> = ({ className }) => {
           ))}
         </div>
         <div className="sort-rating">
-          <Button className="sort-btn">
+          <Button className="sort-btn flex gap-[10px]">
             <ArrowDownUp/>
-            <span>Сортировка:</span>
+            <span >Сортировка:</span>
             рейтингу
           </Button>
         </div>
