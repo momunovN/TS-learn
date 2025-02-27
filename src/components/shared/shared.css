@@ -49,3 +49,9 @@
     font-weight: 400;
     word-wrap: break-word;
 }
+
+
+.ingredients{
+    display: flex;
+    flex-direction: column;
+}
