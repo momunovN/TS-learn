@@ -1,43 +1,234 @@
-// pages/pizzas.js
-import { useEffect, useState } from 'react';
+interface Props {
+className?: string;
+}
 
-const Pizzas = () => {
-  const [pizzas, setPizzas] = useState([]);
-  const [loading, setLoading] = useState(true);
+export const PizzaMain: React.FC<Props> = ({ className }) => {
 
-  useEffect(() => {
-    const fetchPizzas = async () => {
-      try {
-        const response = await fetch('https://api.dodois.io/dodopizza/ru');
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        setPizzas(data.data || []); // Предполагаем, что пиццы находятся в data.data
-      } catch (error) {
-        console.error('Ошибка при загрузке пицц:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
+  const PizzaList = [
+    {
+        "name": "Маргарита",
+        "ingredients": [
+            "тесто",
+            "томатный соус",
+            "моцарелла",
+            "базилик"
+        ],
+        "price": 450
+    },
+    {
+        "name": "Пепперони",
+        "ingredients": [
+            "тесто",
+            "томатный соус",
+            "моцарелла",
+            "пепперони"
+        ],
+        "price": 550
+    },
+    {
+        "name": "Четыре сыра",
+        "ingredients": [
+            "тесто",
+            "томатный соус",
+            "моцарелла",
+            "чеддер",
+            "пармезан",
+            "горгонзола"
+        ],
+        "price": 600
+    },
+    {
+        "name": "Гавайская",
+        "ingredients": [
+            "тесто",
+            "томатный соус",
+            "моцарелла",
+            "ветчина",
+            "ананас"
+        ],
+        "price": 500
+    },
+    {
+        "name": "Острая",
+        "ingredients": [
+            "тесто",
+            "томатный соус",
+            "моцарелла",
+            "острый перец",
+            "анчоусы"
+        ],
+        "price": 550
+    },
+    {
+        "name": "Вегетарианская",
+        "ingredients": [
+            "тесто",
+            "томатный соус",
+            "моцарелла",
+            "перец",
+            "гриб",
+            "цикорий"
+        ],
+        "price": 480
+    },
+    {
+        "name": "Мясная",
+        "ingredients": [
+            "тесто",
+            "томатный соус",
+            "моцарелла",
+            "грудка курицы",
+            "паприка"
+        ],
+        "price": 600
+    },
+    {
+        "name": "С BBQ",
+        "ingredients": [
+            "тесто",
+            "соус BBQ",
+            "куриная грудка",
+            "моцарелла",
+            "лук"
+        ],
+        "price": 570
+    },
+    {
+        "name": "Франковская",
+        "ingredients": [
+            "тесто",
+            "томатный соус",
+            "моцарелла",
+            "колбаса",
+            "гриб"
+        ],
+        "price": 540
+    },
+    {
+        "name": "Спецулинка",
+        "ingredients": [
+            "тесто",
+            "томатный соус",
+            "моцарелла",
+            "брокколи",
+            "цыпленок"
+        ],
+        "price": 620
+    },
+    {
+        "name": "Эксотик",
+        "ingredients": [
+            "тесто",
+            "томатный соус",
+            "моцарелла",
+            "кальмары",
+            "оливки"
+        ],
+        "price": 650
+    },
+    {
+        "name": "Карбонара",
+        "ingredients": [
+            "тесто",
+            "сливочный соус",
+            "моцарелла",
+            "бекон",
+            "яйцо"
+        ],
+        "price": 670
+    },
+    {
+        "name": "Пицца с тунцом",
+        "ingredients": [
+            "тесто",
+            "томатный соус",
+            "моцарелла",
+            "тунц",
+            "лук"
+        ],
+        "price": 580
+    },
+    {
+        "name": "Болоньезе",
+        "ingredients": [
+            "тесто",
+            "томатный соус",
+            "моцарелла",
+            "фарш",
+            "базилик"
+        ],
+        "price": 590
+    },
+    {
+        "name": "Греческая",
+        "ingredients": [
+            "тесто",
+            "томатный соус",
+            "моцарелла",
+            "фета",
+            "оливки",
+            "помидоры"
+        ],
+        "price": 600
+    },
+    {
+        "name": "Мексиканская",
+        "ingredients": [
+            "тесто",
+            "томатный соус",
+            "моцарелла",
+            "фасоль",
+            "перец халапеньо"
+        ],
+        "price": 550
+    },
+    {
+        "name": "Салями",
+        "ingredients": [
+            "тесто",
+            "томатный соус",
+            "моцарелла",
+            "салями"
+        ],
+        "price": 540
+    },
+    {
+        "name": "Курица терияки",
+        "ingredients": [
+            "тесто",
+            "соус терияки",
+            "куриная грудка",
+            "моцарелла",
+            "перец"
+        ],
+        "price": 640
+    },
+    {
+        "name": "Фета и шпинат",
+        "ingredients": [
+            "тесто",
+            "томатный соус",
+            "моцарелла",
+            "фета",
+            "шпинат"
+        ],
+        "price": 570
+    },
+    {
+        "name": "Классическая",
+        "ingredients": [
+            "тесто",
+            "томатный соус",
+            "моцарелла"
+        ],
+        "price": 450
+    }
+]
 
-    fetchPizzas();
-  }, []);
 
-  if (loading) {
-    return <div>Загрузка...</div>;
-  }
-
-  return (
-    <div>
-      <h1>Пиццы</h1>
-      <ul>
-        {pizzas.slice(0, 6).map((pizza) => (
-          <li key={pizza.id}>{pizza.name}</li> // Предполагаем, что у пиццы есть id и name
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-export default Pizzas;
+return (
+  <div>
+      
+  </div>
+);
+}
