@@ -1,0 +1,23 @@
+.pizzaImg {
+    width: fit-content;
+    height: 100%;
+
+}
+
+.pizza-img {
+    width: 285px;
+    height: 260px;
+    background: #FFF7EE;
+    border-radius: 15px;
+}
+
+.pizza-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+
+
+.pizza-card{
+    width: 285px; height: 260px;
+}

@@ -108,5 +108,6 @@ body{
 }
 
 .main{
+  height: 1000px;
   padding: 29px 31px;
 }

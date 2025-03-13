@@ -5,7 +5,7 @@ import "./globals.css";
 import Header from "@/components/shared/header";
 import { Title } from "@/components/shared/title/title";
 import { Filter } from "@/components/shared/title/filter";
-import { Pizza } from "lucide-react";
+import { PizzaMain } from "@/components/shared/title/pizza-main";
 
 const nunito = Nunito({
   subsets: ["cyrillic"],
@@ -37,9 +37,9 @@ export default function RootLayout({
             <div className="main flex flex-col justify-center">
               <Header />
               <Title />
-              <main className="main">
+              <main className="main flex">
                 <Filter/>
-                <Pizza/>
+                <PizzaMain/>
               </main>
             </div>
           </div>
