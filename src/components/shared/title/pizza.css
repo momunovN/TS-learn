@@ -5,19 +5,81 @@
 }
 
 .pizza-img {
-    width: 285px;
-    height: 260px;
+    /* width: 285px;
+    height: 260px; */
     background: #FFF7EE;
     border-radius: 15px;
+
 }
 
 .pizza-cards {
+    gap: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    
+
 }
 
 
-.pizza-card{
-    width: 285px; height: 260px;
+.pizza-card {
+    flex-direction: column;
+
+    justify-content: space-between;
+    display: flex;
+    width: 285px;
+    /* height: 430px; */
+}
+
+
+.pizza-name {
+    color: black;
+    font-size: 22px;
+    font-family: Nunito;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.pizza-igredients {
+
+    color: #B1B1B1;
+    font-size: 14px;
+    font-family: Nunito;
+    font-weight: 400;
+    line-height: 21px;
+    word-wrap: break-word;
+}
+
+
+.pizza-price {
+    color: black;
+    font-size: 20px;
+    font-family: Nunito;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.price-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.card-btn {
+
+    width: 125px;
+    height: 42px;
+    background: #FFFAF4;
+    border-radius: 15px;
+}
+
+.card-btn {
+    color: #FE5F00;
+    font-size: 15px;
+    font-family: Nunito;
+    font-weight: 600;
+    word-wrap: break-word;
+}
+
+.card-btn:hover{
+    color: black;
 }
